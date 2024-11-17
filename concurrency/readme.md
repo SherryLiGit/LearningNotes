@@ -1,12 +1,11 @@
 # Concurrency
 
-## [C++] Tourguide of Thread-Based Concurrency
+## [C++] Mike Shah's Tourguide of Thread-Based Concurrency
 * https://www.youtube.com/playlist?list=PLvv0ScY6vfd_ocTP2ZLicgqKnvq50OCXM | Modern C++ (cpp) Concurrency - YouTube
 
 
-## [C++] Creating a Thread Pool
-* https://www.youtube.com/watch?v=u7ouCuieBhI&t=18s | Master Multithreading : Thread Pool In C++ - YouTube
-* https://www.youtube.com/watch?v=6re5U82KwbY | How to write Thread Pools in C++ - YouTube
+## [C++] CppNuts's In-depth Multithreading Tutorial
+* https://www.youtube.com/playlist?list=PLk6CEY9XxSIAeK-EAh3hB4fgNvYkYmghp | Multithreading In C++ - YouTube
 
 ## Questions Unsolved
 * Understand the usage of condition variables and unique_locks better
@@ -16,3 +15,4 @@
 
 ## More References
 * https://www.youtube.com/watch?v=F6Ipn7gCOsY | Back to Basics: Concurrency - Arthur O'Dwyer - CppCon 2020 - YouTube
+* https://www.youtube.com/watch?v=6re5U82KwbY | How to write Thread Pools in C++ - YouTube
