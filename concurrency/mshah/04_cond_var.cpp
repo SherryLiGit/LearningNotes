@@ -50,12 +50,25 @@ int main(){
 
     std::thread worker([&](){
         // 1. require lock
+        // for the worker / notifier, lock_guard is also accepatable,
+        // because we don't need the auto-unlock mechanism of cond_var.wait()
         std::unique_lock<std::mutex> lock(g_lock);
+
         // 2. change data and condition
         result = 123 + 456 + 789;
         ready = true;
         std::this_thread::sleep_for(std::chrono::seconds(5));
         std::cout << "Work Complete\n";
+
+        // (2.5) lock.unlock()
+        // The notifying thread does not need to hold the lock on the same mutex as the one held by the waiting thread(s); 
+        // in fact doing so is a pessimization, since the notified thread would immediately block again, 
+        // waiting for the notifying thread to release the lock. 
+        // However, some implementations (in particular many implementations of pthreads) recognize this situation 
+        // and avoid this "hurry up and wait" scenario 
+        // by transferring the waiting thread from the condition variable's queue directly to the queue of the mutex within the notify call, 
+        // without waking it up. 
+        
         // 3. notify
         cond_var.notify_one();
     });
