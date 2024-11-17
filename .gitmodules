@@ -1,0 +1,3 @@
+[submodule "recommend_system/shusen_wang"]
+	path = recommend_system/shusen_wang
+	url = git@github.com:wangshusen/RecommenderSystem.git
